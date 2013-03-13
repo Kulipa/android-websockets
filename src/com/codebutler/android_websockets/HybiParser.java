@@ -148,10 +148,12 @@ public class HybiParser {
 		if (!OPCODES.contains(mOpcode)) {
 			throw new ProtocolError("Bad opcode");
 		}
-
+		
+		// This will cause fragmentetd messages to fail
+		/*
 		if (FRAGMENTED_OPCODES.contains(mOpcode) && !mFinal) {
 			throw new ProtocolError("Expected non-final packet");
-		}
+		}*/
 
 		mStage = 1;
 	}
