@@ -244,6 +244,8 @@ public class WebSocketClient {
 					}
 				} catch (IOException e) {
 					mListener.onError(e);
+				} catch (Exception e) {
+					mListener.onError(e);
 				}
 			}
 		});
